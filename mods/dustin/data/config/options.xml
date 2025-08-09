@@ -1,0 +1,19 @@
+<menu name="DUSTIN OPTIONS" desc="">
+    <menu name="Shaders" desc="Enable/Disable Shaders. (for toasters)">
+        <checkbox id="bloom" name="Bloom Shaders" desc="Enable/Disable Bloom Shaders. (very intensive)" />
+        <checkbox id="particles" name="Particles Shaders" desc="Enable/Disable Particles Shaders. (medium intensive)" />
+        <checkbox id="distortion" name="Distortion Shaders" desc="Enable/Disable Distortion Shaders. (medium intensive)" />
+        <checkbox id="godrays" name="God Rays Shader" desc="Enable/Disable God Rays Shaders. (medium intensive)" />
+    </menu>
+    <checkbox id="mechanics" name="Mechanics" desc="" />
+    <checkbox id="nh" name="No-Hit Mode" desc="" />
+    <!--
+	<checkbox id="dev" name="Developer Mode" desc="Enables debug_tools.hx, allows for speeding up/slowing down the game.
+	PRESS 1 - Skip Song
+	PRESS 2 - Slows Game By 10% (Min Speed: 10%)
+	PRESS 3 - Resets Game Speed To 100%
+	PRESS 4 - Speeds Game By 10% (Max Speed: 200%)
+	PRESS 5 - Hold To Speed Game By 2000%, Uses BOTPLAY
+	PRESS 6 - Toggle For Botplay On Player Strums" />
+    -->
+</menu>
