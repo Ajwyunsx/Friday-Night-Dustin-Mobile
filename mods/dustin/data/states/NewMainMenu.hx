@@ -1,4 +1,9 @@
-//
+/*
+🟦🟦🟦🟦🟦
+🟦🟦🟨🟦🟦
+🟦🟫🟨🟫🟦
+🟦🟫🟨🟫🟦
+*/
 import flixel.addons.util.FlxSimplex;
 import funkin.editors.EditorPicker;
 import funkin.menus.ModSwitchMenu;

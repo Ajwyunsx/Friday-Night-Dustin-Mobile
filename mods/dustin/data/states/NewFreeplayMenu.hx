@@ -223,6 +223,9 @@ function create() {
     barBottom = new FunkinSprite(0, FlxG.height).makeSolid(FlxG.width, barHeight, 0xFF000000);
     barBottom.scrollFactor.set();
     add(barBottom);
+
+    addTouchPad('LEFT_FULL', 'A_B');
+    addTouchPadCamera();
 }
 
 var iTime:Float = 0;
