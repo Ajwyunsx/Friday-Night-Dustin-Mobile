@@ -135,7 +135,7 @@ function create() {
     barBottom.scrollFactor.set();
     add(barBottom);
 
-    exittext = new FunkinText(0, 670, FlxG.width, "< EXIT", 36);
+    exittext = new FunkinText(0, 660, FlxG.width, "< EXIT", 46);
     exittext.alignment = "left";
     exittext.font = Paths.font("8bit-jve.ttf");
     add(exittext);
@@ -211,9 +211,8 @@ function update(elapsed) {
         if (FlxG.mouse.justReleased && FlxG.mouse.overlaps(exittext)) {
             if (!exitClicked) {
                 exitClicked = true;
-            } else {
                 CoolUtil.playMenuSFX(2, 0.7);
-                new FlxTimer().start(0.5, function() {
+                new FlxTimer().start(0.4, function() {
                     FlxG.switchState(new MainMenuState());
                     exitClicked = false;
                 });
@@ -223,7 +222,6 @@ function update(elapsed) {
         }
     }
 }
-
 
 var speedizer:Float = 0;
 var xoffset:Float = 0;
@@ -260,7 +258,7 @@ function select(id:Int) {
     weekPlaylist = ut;
     weekDifficulty = ut[0].difficulties[0];
 
-    pillars1.visible = pillars2.visible = text.visible = false;
+    pillars1.visible = pillars2.visible = text.visible = exittext.visible = false;
     for (a in thoseWhoKnow) a[5]?.visible = false;
     for (j in thoseWhoKnowGroup.members) if (j.ID != id) j.visible = false;
     var curScreen = selectScreens[id];
