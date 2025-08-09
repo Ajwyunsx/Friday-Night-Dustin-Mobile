@@ -134,7 +134,7 @@ class FlxJoyStick extends FlxSpriteGroup
 	function createBase():Void
 	{
 		base = new FlxSprite(0, 0);
-		base.loadGraphic(Paths.image('androidcontrols/base'));
+		base.loadGraphic(Paths.image('mobile/base'));
 		base.x += -base.width * 0.5;
 		base.y += -base.height * 0.5;
 		base.scrollFactor.set();
@@ -153,7 +153,7 @@ class FlxJoyStick extends FlxSpriteGroup
 	function createThumb():Void
 	{
 		thumb = new FlxSprite(0, 0);
-		thumb.loadGraphic(Paths.image('androidcontrols/thumb'));
+		thumb.loadGraphic(Paths.image('mobile/thumb'));
 		thumb.x += -thumb.width * 0.5;
 		thumb.y += -thumb.height * 0.5;
 		thumb.scrollFactor.set();
