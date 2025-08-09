@@ -49,15 +49,11 @@ jobs:
                 console.log("Cache cleared.")
               }
             }
-      - name: Making ipa file
+       name: Making ipa file
         run: |
           brew install ldid
-          cd export/release/ios/build/Release-iphoneos/CodenameEngine.app
-          ldid -S../../../CodenameEngine/CodenameEngine.entitlements CodenameEngine
-          cd ..
-          mkdir Payload
-          mv CodenameEngine.app Payload
-          zip -r CodenameEngine.ipa Payload
+          cd export/release/ios/build/Release-iphoneos/dustin.app
+          ldid -S../../../dustin/dustin.entitlements dustin
       - name: Uploading artifact
         uses: actions/upload-artifact@v4
         with:
