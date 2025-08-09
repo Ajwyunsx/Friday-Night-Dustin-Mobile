@@ -225,6 +225,9 @@ function create() {
     FlxG.camera.scroll.x = 220;
     camOFFX = 220;
     leftAlpha = 0;
+    
+    addTouchPad('UP_DOWN', 'A_B');
+    addTouchPadCamera();
 }
 
 var camOFFX:Float = 220;
