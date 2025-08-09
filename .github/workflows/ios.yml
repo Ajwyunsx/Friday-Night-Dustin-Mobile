@@ -49,7 +49,7 @@ jobs:
                 console.log("Cache cleared.")
               }
             }
-       name: Making ipa file
+      - name: Making ipa file
         run: |
           brew install ldid
           cd export/release/ios/build/Release-iphoneos/dustin.app
