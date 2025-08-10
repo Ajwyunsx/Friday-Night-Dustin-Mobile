@@ -41,7 +41,7 @@ class StorageUtil
 		var daPath:String = '';
 		#if android
 		if (!FileSystem.exists(rootDir + 'storagetype.txt'))
-			File.saveContent(rootDir + 'storagetype.txt', funkin.options.Options.storageType);
+			File.saveContent(rootDir + 'storagetype.txt', 'EXTERNAL_DATA');
 		var curStorageType:String = File.getContent(rootDir + 'storagetype.txt');
 		daPath = force ? StorageType.fromStrForce(curStorageType) : StorageType.fromStr(curStorageType);
 		daPath = Path.addTrailingSlash(daPath);
@@ -150,6 +150,7 @@ enum abstract StorageType(String) from String to String
 	
 		return switch (str)
 		{
+			case 'ROOT' : LimeSystem.applicationStorageDirectory;
 			case "EXTERNAL_DATA": EXTERNAL_DATA;
 			case "EXTERNAL_OBB": EXTERNAL_OBB;
 			case "EXTERNAL_MEDIA": EXTERNAL_MEDIA;
@@ -167,6 +168,7 @@ enum abstract StorageType(String) from String to String
 
 		return switch (str)
 		{
+			case 'ROOT' : LimeSystem.applicationStorageDirectory;
 			case "EXTERNAL_DATA": EXTERNAL_DATA;
 			case "EXTERNAL_OBB": EXTERNAL_OBB;
 			case "EXTERNAL_MEDIA": EXTERNAL_MEDIA;

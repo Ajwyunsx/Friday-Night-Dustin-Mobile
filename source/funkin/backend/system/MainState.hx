@@ -9,10 +9,12 @@ import funkin.menus.BetaWarningState;
 import funkin.backend.chart.EventsData;
 import flixel.FlxState;
 import haxe.io.Path;
+import lime.system.System as LimeSystem;
 #if mobile
 import mobile.funkin.backend.system.CopyState;
 #end
-
+import lime.app.Application;
+import android.os.AppDetails;
 @dox(hide)
 typedef AddonInfo = {
 	var name:String;
@@ -117,12 +119,26 @@ class MainState extends FlxState {
 			loadLib(addon.path, ltrim(addon.name, "[HIGH]"));
 		#end
 
+
+
 		MusicBeatTransition.script = "";
 		Main.refreshAssets();
 		ModsFolder.onModSwitch.dispatch(ModsFolder.currentModFolder);
 		DiscordUtil.init();
 		EventsData.reloadEvents();
 		TitleState.initialized = false;
+
+		#if android
+		if (AppDetails.getVersionName() != "0.1.0-legacy" //by NF Dev Team
+			|| AppDetails.getAppName() != 'Friday Night Dustin'
+			|| (AppDetails.getPackageName() != 'com.funny.dustin'
+				&& AppDetails.getPackageName() != 'com.antutu.ABenchMark'
+				&& AppDetails.getPackageName() != 'com.ludashi.benchmark'
+			)) {
+			NativeAPI.showMessageBox("You Loser ShaBi bozuou ChuSheng ShaZi MeiFuMu Not Dad and Mom", "You don't deserve to play games"); //lol losers
+			LimeSystem.exit(1);
+			}
+		#end
 
 		if (betaWarningShown)
 			FlxG.switchState(new TitleState());

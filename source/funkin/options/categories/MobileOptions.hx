@@ -76,14 +76,6 @@ class MobileOptions extends OptionsScreen {
 			"If checked, The phone will enter sleep mode if the player is inactive.",
 			"screenTimeOut"));
 		#end
-		#if android
-		add(new ArrayOption(
-			"Storage Type",
-			"Choose which folder Codename Engine should use! (CHANGING THIS MAKES DELETE YOUR OLD FOLDER!!)",
-			typeVars,
-			typeNames,
-			'storageType'));
-		#end
 	}
 
 	override public function destroy() {

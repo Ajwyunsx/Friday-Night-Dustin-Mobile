@@ -15,6 +15,6 @@ void main()
 {
     vec2 uv = openfl_TextureCoordv.xy;
 
-    gl_FragColor = flixel_texture2D(bitmap, uv);
+    gl_FragColor = texture2D(bitmap, uv);
     gl_FragColor.xyz *= (1.0+(rand(uv+time*.01)-.2)*(strength*.15));	
 }

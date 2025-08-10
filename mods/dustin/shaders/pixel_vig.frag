@@ -16,6 +16,6 @@ void main()
     float edge = pow(length(curve),curvature);
     float vignette = floor((1.-strength*smoothstep(inner,outer,edge))/.2) * .2;
 
-    vec2 blocks = openfl_TextureSize / (uBlocksize*abs(1-vignette));
+    vec2 blocks = openfl_TextureSize / (uBlocksize*abs(1.0-vignette));
     gl_FragColor = flixel_texture2D(bitmap, floor(openfl_TextureCoordv * blocks) / blocks);
 }

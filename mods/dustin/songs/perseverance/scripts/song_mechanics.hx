@@ -34,6 +34,10 @@ function stepHit(step:Int) {
                 FlxTween.tween(s, {alpha: 0}, (Conductor.stepCrochet / 1000) * 8, {ease: FlxEase.quadOut});
             */
         case 2192: canDodge = true;
+        PlayState.qqqeb = true;
+        removeHitbox();
+        addHitbox();
+        hitbox.visible = true;
         case 2256:
             for (element in hudElements)
                 FlxTween.tween(element, {alpha: 0}, (Conductor.stepCrochet / 1000) * 4, {ease: FlxEase.quadOut});
@@ -94,6 +98,10 @@ function stepHit(step:Int) {
                 });
             });
         case 2284:
+        PlayState.qqqeb = false;
+        removeHitbox();
+        addHitbox();
+        hitbox.visible = true;
             for (element in hudElements)
                 FlxTween.tween(element, {alpha: 1}, (Conductor.stepCrochet / 1000) * 4, {ease: FlxEase.quadOut});
             /*
@@ -121,7 +129,7 @@ function update(elapsed:Float) {
 
     if (!FlxG.save.data.mechanics) return;
 
-    if (!dodging && dodgeCooldown <= 0 && canDodge && FlxG.keys.justPressed.SPACE) {
+    if (!dodging && dodgeCooldown <= 0 && canDodge && FlxG.keys.justPressed.SPACE || !dodging && dodgeCooldown <= 0 && canDodge && hitbox.Extra) {
         dodging = true; dodgeTimer = .8; 
         boyfriend.playAnim("dodge", true);
     }

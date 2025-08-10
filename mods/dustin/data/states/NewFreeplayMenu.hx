@@ -309,7 +309,7 @@ function update(elapsed:Float) {
         FlxG.switchState(new MainMenuState());
     }
 
-    if (allowInput && (controls.ACCEPT || FlxG.mouse.justPressed)) {
+    if (allowInput && (controls.ACCEPT)) {
         allowInput = false;
         selectSong();
     }

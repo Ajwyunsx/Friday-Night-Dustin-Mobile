@@ -7,7 +7,7 @@ void main()
 
     // Time varying pixel color
     vec4 col = flixel_texture2D(bitmap, openfl_TextureCoordv);
-    if (threshold == -1) {
+    if (threshold == -1.0) {
         gl_FragColor = col;
         return;
     }

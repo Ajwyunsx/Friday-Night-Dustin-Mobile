@@ -105,6 +105,9 @@ function create() {
     bloom.directions = 8;
     bloom.quality = 10;
     FlxG.camera.addShader(bloom);
+    
+    addTouchPad('LEFT_RIGHT', 'A_B');
+    addTouchPadCamera();
 }
 
 function update(elapsed:Float) {

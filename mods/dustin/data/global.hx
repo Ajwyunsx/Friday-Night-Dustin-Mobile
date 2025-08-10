@@ -18,10 +18,10 @@ import Sys;
 function new() {
     Handle.init([]);
     
-    if (!Assets.exists(Paths.image('DO_NOT_DELETE', null, false, 'jpg'))) {
-        NativeAPI.showMessageBox('WHY', 'HOW DRE YOU!! >:((');
-        Sys.exit(0);
-    }
+    // if (!Assets.exists(Paths.image('DO_NOT_DELETE', null, false, 'jpg'))) {
+    //     NativeAPI.showMessageBox('WHY', 'HOW DRE YOU!! >:((');
+    //     Sys.exit(0);
+    // }
 
     load_save();
 

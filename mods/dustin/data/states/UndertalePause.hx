@@ -88,6 +88,9 @@ function create(_) {
 		case "homiecide": 900;
 		default: Math.floor(FlxG.width / 1.312);
 	} + charOffsetX}, 0.6, {ease: FlxEase.backOut, startDelay: 0.1});
+	
+	addTouchPad('UP_DOWN', 'A');
+    addTouchPadCamera();
 }
 
 var __offsets:Array<Int>;

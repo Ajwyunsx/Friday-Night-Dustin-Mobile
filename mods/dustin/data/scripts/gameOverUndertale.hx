@@ -152,6 +152,8 @@ function create(e) {
             onComplete: function(_) {
                 quoteText.start();
                 gameOverEnd = true;
+                addTouchPad('NONE', 'A_B');
+                addTouchPadCamera();
             }
         });
     });

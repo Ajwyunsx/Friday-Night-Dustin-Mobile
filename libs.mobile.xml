@@ -9,17 +9,17 @@
 		<!-- <git name="lime" url="https://github.com/CodenameCrew/cne-lime" />  disabled for now until fixed -->
 
 		<!-- Flixel -->
-		<git name="flixel" url="https://github.com/CodenameCrew/cne-flixel" />
-		<git name="flixel-addons" url="https://github.com/CodenameCrew/cne-flixel-addons" />
+		<git name="flixel" url="https://hk.gh-proxy.com/https://github.com/CodenameCrew/cne-flixel" />
+		<git name="flixel-addons" url="https://hk.gh-proxy.com/https://github.com/CodenameCrew/cne-flixel-addons" />
 
 		<!-- Other Libraries -->
-		<git name="hscript-improved" url="https://github.com/CodenameCrew/hscript-improved" ref="custom-classes" />
-		<git name="flxanimate" url="https://github.com/CodenameCrew/cne-flxanimate" />
-		<git name="hxdiscord_rpc" url="https://github.com/CodenameCrew/cne-hxdiscord_rpc" skipDeps="true" />
+		<git name="hscript-improved" url="https://hk.gh-proxy.com/https://github.com/CodenameCrew/hscript-improved" ref="custom-classes" />
+		<git name="flxanimate" url="https://hk.gh-proxy.com/https://github.com/CodenameCrew/cne-flxanimate" />
+		<git name="hxdiscord_rpc" url="https://hk.gh-proxy.com/https://github.com/CodenameCrew/cne-hxdiscord_rpc" skipDeps="true" />
 		<lib name="hxvlc" version="1.9.3" skipDeps="true" />
 
 		<!-- Documentation and other features -->
-		<git name="away3d" url="https://github.com/CodenameCrew/away3d" />
+		<git name="away3d" url="https://hk.gh-proxy.com/https://github.com/CodenameCrew/away3d" />
 		<!-- <lib name="dox" /> -->
 		<lib name="markdown" />
 		<lib name="hxcpp-debug-server" />
@@ -30,7 +30,7 @@
 		<lib global="true" name="hxp" /> <lib name="hxp" />
 		<lib global="true" name="format" /> <lib name="format" />
 
-		<git name="hxcpp" url="https://github.com/th2l-devs/hxcpp" />
+		<git name="hxcpp" url="https://hk.gh-proxy.com/https://github.com/th2l-devs/hxcpp" />
 	</if>
 	
 	<!-- Lime Building -->

@@ -21,7 +21,7 @@ void main() {
     float _maxStrength = clamp(sin(iTime/2.0),minStrength,maxStrength) * strengthMulti;
     
     vec3 colour = vec3(random(uv2.xy) - 0.1)*_maxStrength;
-    vec4 flixel = flixel_texture2D(bitmap, uv);
+    vec4 flixel = texture2D(bitmap, uv);
     vec3 background = vec3(flixel);
     
     gl_FragColor = vec4(background-colour, flixel.a);
